@@ -4,7 +4,7 @@ import os
 emails='gestores_email'
 office='herramientas_office'
 browsers='navegadores'
-source = f'./datasets/{browsers}/labels/train'
+source = f'./labels'
 counted_elements = {}
 # We loop through all the files in the path
 for filename in os.listdir(source):
@@ -20,8 +20,9 @@ for filename in os.listdir(source):
                     counted_elements[column] += 1
                 else:
                     counted_elements[column] = 1
-names_elements= ['Buttons','Cells','Checkbox','DropDownList', 'HamburgerButton', 'Icon','ListBoxes', 
+names_elements= ['Buttons','Cells','Checkbox','DropDownList', 'HamburguerLIst', 'Icon','ListBoxes', 
         'ProgressBar', 'RadioButton', 'SearchBox','Submenu', 'TextFields', 'Toggles']
+
 # Print results
 for element, quantity in counted_elements.items():      
     print(f"{names_elements[int(element)]}: {quantity}")

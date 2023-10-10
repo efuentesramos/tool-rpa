@@ -4,3 +4,7 @@
 *.jpg
 *.txt
 __pycache__/
+target/
+temp/
+*.lock
+*.winmd
